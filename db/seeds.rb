@@ -3,7 +3,8 @@ if Rails.env.development?
 
   user = User.create! :name => 'Test User', :initials => 'TU',
                       :email => 'test@example.com', :password => 'testpass'
-  user.confirm!
+  #user.confirm!
+  #uncomment that if you choose to use devise's confirmable module
 
   project = Project.create! :name => 'Test Project', :users => [user], :start_date => Time.now
 
